@@ -34,8 +34,43 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // 项目卡片3D效果
+    // 项目卡片3D效果与全屏展示
     const projectCards = document.querySelectorAll('.project-card');
+
+    const openProjectModal = (card) => {
+        const overlay = document.createElement('div');
+        overlay.className = 'project-modal-overlay';
+
+        const modal = document.createElement('div');
+        modal.className = 'project-modal';
+
+        const closeBtn = document.createElement('button');
+        closeBtn.className = 'project-modal-close';
+        closeBtn.innerHTML = '&times;';
+
+        const content = card.cloneNode(true);
+        content.style.transform = ''; // reset transform if any
+
+        modal.appendChild(closeBtn);
+        modal.appendChild(content);
+        overlay.appendChild(modal);
+        document.body.appendChild(overlay);
+
+        const close = () => {
+            if (overlay.parentNode) {
+                overlay.parentNode.removeChild(overlay);
+            }
+        };
+
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) {
+                close();
+            }
+        });
+
+        closeBtn.addEventListener('click', close);
+    };
+
     projectCards.forEach(card => {
         card.addEventListener('mousemove', function(e) {
             const rect = card.getBoundingClientRect();
@@ -53,6 +88,10 @@ document.addEventListener('DOMContentLoaded', function() {
         
         card.addEventListener('mouseleave', function() {
             card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
+        });
+
+        card.addEventListener('click', function() {
+            openProjectModal(card);
         });
     });
 
