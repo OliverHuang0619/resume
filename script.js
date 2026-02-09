@@ -90,42 +90,6 @@ document.addEventListener('DOMContentLoaded', function() {
         skillObserver.observe(card);
     });
 
-    // 添加打印功能
-    const printButton = document.createElement('button');
-    printButton.textContent = '📄 打印简历';
-    printButton.style.cssText = `
-        position: fixed;
-        bottom: 30px;
-        right: 30px;
-        padding: 15px 25px;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
-        border: none;
-        border-radius: 50px;
-        font-size: 16px;
-        font-weight: 600;
-        cursor: pointer;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        transition: all 0.3s ease;
-        z-index: 1000;
-    `;
-    
-    printButton.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-3px)';
-        this.style.boxShadow = '0 6px 20px rgba(0, 0, 0, 0.3)';
-    });
-    
-    printButton.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateY(0)';
-        this.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.2)';
-    });
-    
-    printButton.addEventListener('click', function() {
-        window.print();
-    });
-    
-    document.body.appendChild(printButton);
-
     // 添加返回顶部按钮
     const backToTop = document.createElement('button');
     backToTop.innerHTML = '↑';
@@ -185,12 +149,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // 添加键盘快捷键
 document.addEventListener('keydown', function(e) {
-    // Ctrl/Cmd + P 打印
-    if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
-        e.preventDefault();
-        window.print();
-    }
-    
     // Esc 返回顶部
     if (e.key === 'Escape') {
         window.scrollTo({

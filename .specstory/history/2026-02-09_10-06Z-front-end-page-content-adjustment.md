@@ -380,3 +380,162 @@ _**Agent (model default, mode Agent)**_
 
 ---
 
+<think><details><summary>Thought Process</summary>
+
+我需要看到第二家公司的完整内容。
+</details></think>
+
+---
+
+
+
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: e:\03-个人资料\简历\index.html</summary>
+
+</details>
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+
+好的，我找到了第二家公司的工作经历部分。现在我需要将：
+- 日期：2015.06 - 2019.09（保持不变）
+- 职位：嵌入式软件工程师（保持不变）
+- 公司：福建某某智能科技有限公司 · 研发部 → 光速达物联网科技股份有限公司
+- 工作内容：替换成图片中的5个要点
+
+让我进行替换。
+</details></think>
+
+---
+
+
+替换第二家公司的工作内容为图片中的内容。
+
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
+
+<details><summary>Tool use: **edit_file_v2** • Edit file: e:\03-个人资料\简历\index.html</summary>
+
+</details>
+
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+
+好的，我已经成功替换了第二家公司的工作内容。现在应该告诉用户已经完成更新。
+</details></think>
+
+---
+
+
+### 已更新第二家公司工作内容
+
+- **公司名称**：已更新为 `光速达物联网科技股份有限公司`
+- **工作内容**：已替换为图片中的5个要点：
+  1. OMP中央控制系统设备管控引擎研发，实现8类设备跨品牌兼容接入
+  2. 设计并优化场景化联动协议，500ms内高效响应
+  3. 主导智能开关产品线全系嵌入式软件开发，降低客户投诉率60%
+  4. 深度集成OMP平台与智能开关产品，市场占有率提升至25%
+  5. 独立开发智慧酒店设备5款，累计部署超过2000间客房，提升节能效率22%
+
+请在浏览器刷新查看更新后的内容。如需调整，请告诉我。
+
+---
+
+_**User**_
+
+第三家公司换成这个.
+
+---
+
+_**Agent (model default, mode Agent)**_
+
+<think><details><summary>Thought Process</summary>
+
+用户要求将第三家公司的工作内容替换成图片中的内容。让我先读取当前文件中第三家公司的部分，然后进行替换。
+
+根据图片描述：
+- 时间：2014-01 ~ 2015-06
+- 公司：福建汇兴智能化科技有限公司
+- 职位：嵌入式工程师
+- 工作内容有5个要点
+
+让我先读取文件看看当前第三家公司的内容。
+</details></think>
+
+---
+
+
+读取第三家公司的工作经历部分，准备替换为图片中的内容。
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: e:\03-个人资料\简历\index.html</summary>
+
+</details>
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+
+好的，我找到了第三家公司的工作经历部分。现在我需要将其替换为图片中的内容：
+- 时间：2014.01 - 2015.06（保持不变）
+- 职位：嵌入式工程师（从"嵌入式软件工程师"改为"嵌入式工程师"）
+- 公司：福建汇兴智能化科技有限公司（从"某电力自动化设备有限公司 · 研发部"改为"福建汇兴智能化科技有限公司"）
+- 工作内容：替换为5个要点
+</details></think>
+
+---
+
+
+替换第三家公司的工作内容为图片中的内容。
+
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
+
+<details><summary>Tool use: **edit_file_v2** • Edit file: e:\03-个人资料\简历\index.html</summary>
+
+</details>
+
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+
+好的，我已经成功替换了第三家公司的工作内容。现在应该告诉用户已经完成更新。
+</details></think>
+
+---
+
+
+### 已更新第三家公司工作内容
+
+- **公司名称**：已更新为 `福建汇兴智能化科技有限公司`
+- **职位**：已更新为 `嵌入式工程师`
+- **工作内容**：已替换为图片中的5个要点：
+  1. 负责温度采集器、电弧检测器及手持终端等嵌入式设备的驱动程序开发与功能实现
+  2. 深入参与RF芯片、GPS模块、NTC温度传感器、TFT LCD等硬件接口的底层驱动开发与调试
+  3. 参与无线通信协议的设计、开发与维护，优化数据传输效率与系统通信的可靠性
+  4. 配合硬件工程师进行软硬件联调，分析并解决嵌入式系统开发过程中出现的技术问题
+  5. 编写和维护相关技术文档，包括驱动开发说明、接口协议文档及测试用例
+
+请在浏览器刷新查看更新后的内容。如需调整，请告诉我。
+
+---
+
