@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 添加页面加载完成提示
     console.log('🎉 简历页面加载完成！');
-    console.log('💼 黄志文 - 嵌入式软件工程师');
+    console.log('💼 黄志文 - 嵌入式软件技术经理');
 });
 
 // 添加键盘快捷键
