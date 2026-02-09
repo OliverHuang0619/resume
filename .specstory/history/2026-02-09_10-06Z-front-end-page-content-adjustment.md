@@ -924,3 +924,66 @@ I need to change the second project card, currently titled "低功耗优化项�
 
 ---
 
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
+
+<details><summary>Tool use: **edit_file_v2** • Edit file: e:\03-个人资料\简历\index.html</summary>
+
+</details>
+
+</tool-use>
+
+---
+
+### 已将第二个项目改为 FFO
+
+- **项目名称**：第二个项目已改为 `FFO 应用框架平台`，公司为 `2020.06 - 2021.03 | 立达信物联科技股份有限公司`。  
+- **项目描述**：结合你给的官网截图，写成一段：强调 FFO 是面向 IoT 设备的跨芯片、模块化嵌入式应用框架，统一 HAL/OSAL 抽象 + CBB 组件库 + 配置工具，突出 **60% 项目使用率、100+ CBB、365 天稳定运行** 等指标。  
+- **主要职责**：保持原有格式，填了 5 条职责，覆盖：总体架构设计、跨芯片抽象与驱动框架、100+ CBB 组件库规划实现、MLOOP/低功耗/快速启动等能力设计、以及文档输出和内部培训推广。  
+- **技术栈标签**：更新为 `FFO / CBB 模块化 / 跨芯片平台 / MLOOP 调度 / HAL / OSAL / IoT 设备`，和官网定位一致。  
+
+你可以在浏览器刷新看下这一块：如果想把某些数字（比如使用率、组件数量）或措辞再贴近官网一点，我可以按你指定的原文再微调。
+
+---
+
+_**User**_
+
+FFO应用平台，增加这个链接：https://oliverhuang0619.github.io/ffo 
+
+---
+
+_**Agent (model default, mode Agent)**_
+
+<think><details><summary>Thought Process</summary>
+**Modifying project index**
+
+I need to modify the index.html for my second project to include a link without changing the format. I’ll focus on making the project title or description clickable by wrapping it in an anchor tag. I can use Read then ApplyPatch or a search_replace to do this, and I already have the FFO project card snippet to reference. I’ll wrap the project name with `<a href="..." target="_blank" rel="noopener noreferrer">` to ensure it works while keeping everything minimal.</details></think>
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: e:\03-个人资料\简历\index.html</summary>
+
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
+
+<details><summary>Tool use: **edit_file_v2** • Edit file: e:\03-个人资料\简历\index.html</summary>
+
+</details>
+
+</tool-use>
+
+---
+
+### 已为 FFO 项目增加官网链接
+
+- **项目标题**：现在第二个项目的标题改为可点击形式：`FFO 应用框架平台` 已包裹链接，指向 `https://oliverhuang0619.github.io/ffo`，新窗口打开，不影响当前简历页。  
+- **布局/格式**：仍然使用原来的 `h3` 标题，只是在内部加了 `<a>` 标签，整体项目卡片结构和样式不变。  
+
+你刷新页面后，鼠标移到第二个项目标题上即可点击跳转到 FFO 页面。如需改成在描述那一行加链接，而标题保持纯文本，也可以告诉我。
+
+---
+
