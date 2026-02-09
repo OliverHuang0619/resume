@@ -1091,3 +1091,37 @@ I’ve found a bug in the script at line 52 where the style transformation is ca
 
 ---
 
+_**User**_
+
+工作的经历也增加同样的功能
+
+---
+
+_**Agent (model default, mode Agent)**_
+
+<think><details><summary>Thought Process</summary>
+
+用户希望工作经历部分也增加同样的全屏展示功能。我需要：
+1. 为工作经历的 timeline-item 添加点击事件
+2. 复用相同的全屏弹窗逻辑
+3. 确保样式和交互一致
+
+让我先查看一下工作经历的HTML结构，然后修改JavaScript代码。
+</details></think>
+
+---
+
+
+查看工作经历的HTML结构，然后为工作经历添加相同的全屏展示功能。
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: e:\03-个人资料\简历\index.html</summary>
+
+</details>
+</tool-use>
+
+---
+

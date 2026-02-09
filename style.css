@@ -401,6 +401,35 @@ body {
     line-height: 1;
 }
 
+.project-modal-close:hover {
+    color: var(--text-dark);
+}
+
+.project-modal .timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+    padding-left: 0;
+    cursor: default;
+}
+
+.project-modal .timeline-item::before {
+    display: none;
+}
+
+.project-modal .timeline-date {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.project-modal .timeline-content h3 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.project-modal .timeline-content {
+    padding-left: 0;
+}
+
 /* 教育背景 */
 .education-item {
     background: var(--bg-light);

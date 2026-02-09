@@ -47,6 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const closeBtn = document.createElement('button');
         closeBtn.className = 'project-modal-close';
         closeBtn.innerHTML = '&times;';
+        closeBtn.setAttribute('aria-label', '关闭');
 
         const content = card.cloneNode(true);
         content.style.transform = ''; // reset transform if any
@@ -55,10 +56,12 @@ document.addEventListener('DOMContentLoaded', function() {
         modal.appendChild(content);
         overlay.appendChild(modal);
         document.body.appendChild(overlay);
+        document.body.style.overflow = 'hidden'; // 防止背景滚动
 
         const close = () => {
             if (overlay.parentNode) {
                 overlay.parentNode.removeChild(overlay);
+                document.body.style.overflow = ''; // 恢复滚动
             }
         };
 
@@ -69,6 +72,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         closeBtn.addEventListener('click', close);
+
+        // ESC键关闭
+        const escHandler = (e) => {
+            if (e.key === 'Escape') {
+                close();
+                document.removeEventListener('keydown', escHandler);
+            }
+        };
+        document.addEventListener('keydown', escHandler);
     };
 
     projectCards.forEach(card => {
@@ -90,8 +102,37 @@ document.addEventListener('DOMContentLoaded', function() {
             card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
         });
 
-        card.addEventListener('click', function() {
+        card.addEventListener('click', function(e) {
+            // 如果点击的是链接，不触发弹窗
+            if (e.target.tagName === 'A') {
+                return;
+            }
             openProjectModal(card);
+        });
+    });
+
+    // 工作经历全屏展示
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    timelineItems.forEach(item => {
+        item.style.cursor = 'pointer';
+        item.style.transition = 'all 0.3s ease';
+        
+        item.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateX(5px)';
+            this.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
+        });
+        
+        item.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateX(0)';
+            this.style.boxShadow = 'none';
+        });
+
+        item.addEventListener('click', function(e) {
+            // 如果点击的是链接或其他交互元素，不触发弹窗
+            if (e.target.tagName === 'A' || e.target.closest('a')) {
+                return;
+            }
+            openProjectModal(item);
         });
     });
 
@@ -188,11 +229,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // 添加键盘快捷键
 document.addEventListener('keydown', function(e) {
-    // Esc 返回顶部
+    // Esc 关闭弹窗（如果存在）或返回顶部
     if (e.key === 'Escape') {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
+        const modal = document.querySelector('.project-modal-overlay');
+        if (modal) {
+            modal.remove();
+            document.body.style.overflow = '';
+        } else {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
     }
 });
