@@ -1125,3 +1125,363 @@ _**Agent (model default, mode Agent)**_
 
 ---
 
+<think><details><summary>Thought Process</summary>
+
+我看到工作经历的结构是 `.timeline-item`，每个工作经历项包含 `.timeline-content`。我需要为这些 `.timeline-item` 添加点击事件，让它们也能全屏展示。我会复用相同的弹窗逻辑。
+</details></think>
+
+---
+
+
+为工作经历添加相同的全屏展示功能。
+
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
+
+<details><summary>Tool use: **edit_file_v2** • Edit file: e:\03-个人资料\简历\script.js</summary>
+
+</details>
+
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+
+我还需要确保工作经历项在弹窗中也能正确显示。让我检查一下CSS，确保timeline-item在弹窗中也有合适的样式。
+</details></think>
+
+---
+
+
+更新CSS，确保工作经历在弹窗中正确显示：
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: e:\03-个人资料\简历\style.css</summary>
+
+</details>
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+
+我需要查看一下弹窗相关的CSS样式，确保工作经历项在弹窗中也能正确显示。让我查看一下之前添加的弹窗样式。
+</details></think>
+
+---
+
+
+
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: e:\03-个人资料\简历\style.css</summary>
+
+</details>
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+
+好的，弹窗样式已经存在了。现在我需要确保工作经历项在弹窗中也能正确显示。让我添加一些CSS样式来优化工作经历在弹窗中的显示效果。
+</details></think>
+
+---
+
+
+添加CSS样式，优化工作经历在弹窗中的显示：
+
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
+
+<details><summary>Tool use: **edit_file_v2** • Edit file: e:\03-个人资料\简历\style.css</summary>
+
+</details>
+
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+
+现在我还需要确保点击事件不会阻止链接的正常跳转。让我再检查一下代码，确保当点击工作经历中的链接时，不会触发弹窗。
+</details></think>
+
+---
+
+
+更新 JavaScript，确保点击链接时不会触发弹窗：
+
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
+
+<details><summary>Tool use: **edit_file_v2** • Edit file: e:\03-个人资料\简历\script.js</summary>
+
+</details>
+
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+
+好的，现在我还需要添加一个功能：当弹窗打开时，按ESC键可以关闭弹窗。让我更新键盘快捷键部分。
+</details></think>
+
+---
+
+
+添加 ESC 键关闭弹窗功能：
+
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
+
+<details><summary>Tool use: **edit_file_v2** • Edit file: e:\03-个人资料\简历\script.js</summary>
+
+</details>
+
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+
+现在我还需要更新键盘快捷键部分，确保ESC键优先关闭弹窗，如果没有弹窗才返回顶部。
+</details></think>
+
+---
+
+
+更新键盘快捷键，确保 ESC 优先关闭弹窗：
+
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
+
+<details><summary>Tool use: **edit_file_v2** • Edit file: e:\03-个人资料\简历\script.js</summary>
+
+</details>
+
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+
+好的，现在功能应该完整了。让我总结一下我做的修改：
+
+1. 为工作经历项（.timeline-item）添加了点击事件，点击后可以全屏展示
+2. 添加了鼠标悬停效果（向右移动和阴影）
+3. 确保点击链接时不会触发弹窗
+4. 优化了工作经历在弹窗中的显示样式
+5. 添加了ESC键关闭弹窗的功能
+6. 弹窗打开时禁止背景滚动
+
+现在工作经历和项目经历都应该可以全屏展示了。
+</details></think>
+
+---
+
+
+### 已为工作经历添加全屏展示功能
+
+- **点击交互**：点击任意工作经历项（`.timeline-item`）会弹出全屏展示
+- **悬停效果**：鼠标悬停时，工作经历项会向右移动并显示阴影，提示可点击
+- **链接保护**：点击工作经历中的链接（如 FFO 项目链接）不会触发弹窗，正常跳转
+- **样式优化**：在弹窗中，工作经历的时间线样式已调整，显示更清晰
+- **关闭方式**：
+  - 点击右上角关闭按钮 `×`
+  - 点击遮罩空白区域
+  - 按 `ESC` 键（优先关闭弹窗，无弹窗时返回顶部）
+- **滚动锁定**：弹窗打开时禁止背景滚动，关闭后恢复
+
+刷新页面后，点击任意工作经历项即可全屏查看。如需调整样式或交互，告诉我。
+
+---
+
+_**User**_
+
+项目经历3改成:ACK(Alexa Connect Kits) 项目集, 2022.10 - 至今, 立达信物联科技股份有限公司
+项目描述:用于连接Alexa的项目开发平台,包括智能灯泡,智能开关,智能插座等产品,支持Matter over Wi-Fi.
+主要职责:
+1.软件框架/工程搭建;
+2.CI/CD自动化流程构建；
+3.产品行为规范定义,包括Matter Cluster, 按键, LED场景, Metric等
+3.项目管理,任务拆解,风险把控,技术支持;
+
+技术栈包括,ACK, ESP32-C3,Matter,Wi-Fi,BLE
+
+
+---
+
+_**Agent (model default, mode Agent)**_
+
+<think><details><summary>Thought Process</summary>
+
+The user wants to modify the third project experience in the resume. Let me find the third project in the index.html and replace it with the new content they provided.
+
+I need to:
+1. Find the third project card in index.html
+2. Replace it with:
+- Title: ACK(Alexa Connect Kits) 项目集
+- Date/Company: 2022.10 - 至今, 立达信物联科技股份有限公司
+- Project description: 用于连接Alexa的项目开发平台,包括智能灯泡,智能开关,智能插座等产品,支持Matter over Wi-Fi.
+- Main responsibilities (主要职责):
+  1. 软件框架/工程搭建
+  2. CI/CD自动化流程构建
+  3. 产品行为规范定义,包括Matter Cluster, 按键, LED场景, Metric等
+  4. 项目管理,任务拆解,风险把控,技术支持 (user wrote "3" twice, so the 4th one is 4)
+- Tech stack: ACK, ESP32-C3, Matter, Wi-Fi, BLE
+
+Let me read the index.html to find the third project.
+</details></think>
+
+---
+
+
+查找第三个项目经历并替换为你提供的内容。
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: e:\03-个人资料\简历\index.html</summary>
+
+</details>
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+
+I see the project order:
+1. A667-C SBL 项目
+2. FFO 应用框架平台
+3. 智能温控器项目 (third one)
+4. 组网通信优化项目
+5. 智能家居产品开发
+
+So the third project is "智能温控器项目". I need to replace it with the ACK project content.
+</details></think>
+
+---
+
+
+正在将第三个项目（智能温控器项目）替换为 ACK 项目集内容。
+
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
+
+<details><summary>Tool use: **edit_file_v2** • Edit file: e:\03-个人资料\简历\index.html</summary>
+
+</details>
+
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+
+Done. I've replaced the third project (智能温控器项目) with the ACK project content. The user had "3" twice for the main responsibilities - I kept all 4 items and numbered them 1-4 in the list. Tech stack is ACK, ESP32-C3, Matter, Wi-Fi, BLE as requested.
+</details></think>
+
+---
+
+
+已把第三个项目经历改为 ACK 项目集，具体如下：
+
+- **项目名称**：ACK (Alexa Connect Kits) 项目集  
+- **时间与公司**：2022.10 - 至今 | 立达信物联科技股份有限公司  
+- **项目描述**：用于连接 Alexa 的项目开发平台，包括智能灯泡、智能开关、智能插座等产品，支持 Matter over Wi-Fi。  
+- **主要职责**（4 条）：  
+  1. 软件框架/工程搭建  
+  2. CI/CD 自动化流程构建  
+  3. 产品行为规范定义，包括 Matter Cluster、按键、LED 场景、Metric 等  
+  4. 项目管理、任务拆解、风险把控、技术支持  
+- **技术栈**：ACK、ESP32-C3、Matter、Wi-Fi、BLE  
+
+刷新页面即可看到更新。如需再改文案或顺序，可以继续说。
+
+---
+
+_**User**_
+
+丰富下项目3的项目描述和主要职责.
+
+---
+
+_**Agent (model default, mode Agent)**_
+
+<think><details><summary>Thought Process</summary>
+
+The user wants me to enrich/expand the project description and main responsibilities for project 3, which is the ACK (Alexa Connect Kits) 项目集. I need to read the current content and then expand it with more detail while keeping the same structure and style.
+</details></think>
+
+---
+
+
+查看项目 3 的当前内容并丰富项目描述与主要职责。
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: e:\03-个人资料\简历\index.html</summary>
+
+</details>
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+
+I'll enrich the project description to include:
+- What ACK is (Amazon's development platform for Alexa-connected devices)
+- Scope: multiple product types (bulb, switch, plug)
+- Matter over Wi-Fi support and its significance
+- Multi-product line, unified platform
+- Maybe mention certification, quality, delivery
+
+For main responsibilities I'll expand each point with more concrete actions and outcomes:
+1. 软件框架/工程搭建 - unified codebase, build system, multi-product support
+2. CI/CD - pipeline, automated test, release
+3. 产品行为规范 - Matter clusters, UX (button, LED), metrics, compliance
+4. 项目管理 - WBS, risk, technical support, cross-team
+</details></think>
+
+---
+
+
+
+
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
+
+<details><summary>Tool use: **edit_file_v2** • Edit file: e:\03-个人资料\简历\index.html</summary>
+
+</details>
+
+</tool-use>
+
+---
+
