@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>黄志文 - 个人简历</title>
+    <title>Oliver Huang</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <!-- 头部信息 -->
         <header class="header">
             <a href="index_en.html" class="lang-switcher" title="English">EN</a>
             <div class="profile-section">
@@ -17,10 +16,10 @@
                 </div>
                 <div class="profile-info">
                     <div class="name-block">
-                        <h1>黄志文</h1>
+                        <h1>黄志文Oliver</h1>
                         <p class="motto">要有懒的思维，并用技术解决你的懒。</p>
                     </div>
-                    <p class="title">求职意向：嵌入式软件经理/架构师</p>
+                    <p class="title">产品定位：嵌入式软件经理 / 架构师 · 智能硬件与平台化交付</p>
                     <div class="contact-info">
                         <span class="contact-item"><i class="contact-icon">🏷</i><span class="contact-text">年龄：35岁</span></span>
                         <span class="contact-item"><i class="contact-icon">📍</i><span class="contact-text">居住地：福建 · 厦门 / 泉州</span></span>
@@ -31,17 +30,106 @@
             </div>
         </header>
 
-        <!-- 个人简介 -->
         <section class="section">
-            <h2 class="section-title">个人简介</h2>
+            <h2 class="section-title">产品价值主张</h2>
             <div class="content">
-                <p>10年+以上嵌入式与物联网研发经验，从驱动开发、协议栈到应用框架均有扎实实践；近年聚焦智能硬件与平台化建设，主导 FFO 应用框架、ACK 项目集及 LoRaWAN 等系统级方案，擅长用架构抽象与自动化（CI/CD、工具链）提升交付效率与质量。具备从需求评审、技术选型到量产交付的端到端项目管理能力，注重用技术手段减少重复劳动、让团队聚焦业务创新，追求「要有懒的思维，并用技术解决你的懒」的工程实践。</p>
+                <p>面向需要<strong>智能硬件量产、物联网平台化与高效交付</strong>的团队，提供从架构设计、平台搭建到项目落地的端到端能力。通过平台化复用与自动化工具链，降低重复劳动与缺陷率，缩短新品类上线周期，帮助团队在保证质量的前提下持续提速。核心理念：用技术解决「懒」——把时间留给创新与业务。</p>
             </div>
         </section>
 
-        <!-- 专业技能 -->
         <section class="section">
-            <h2 class="section-title">专业技能</h2>
+            <h2 class="section-title">核心价值与差异化</h2>
+            <div class="content">
+                <ul class="achievements">
+                    <li><strong>平台化与复用</strong>：主导 FFO 应用框架、CBB 组件库等基础设施，多产品线复用，新人上手周期缩短至约 2 周，代码复用率提升约 80%，缺陷率显著下降。</li>
+                    <li><strong>自动化与效能</strong>：CI/CD、编译缓存与静态检查落地，构建时间与流水线耗时大幅缩短；引入 AI 辅助与规范，提升代码质量与评审通过率。</li>
+                    <li><strong>端到端交付</strong>：从需求评审、技术选型、架构设计到量产交付的全程参与，擅长任务拆解、风险把控与跨部门协调，保障按期高质量交付。</li>
+                    <li><strong>可量化的业务结果</strong>：智能硬件年出货 50 万+、LoRaWAN 延迟与 OTA 成功率等关键指标优化、客户投诉率与缺陷密度下降等，均有明确数据支撑。</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">交付成果与案例</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <h3>CartSBL · 物流与系统优化</h3>
+                    <p class="project-desc">2025.04 - 至今 | 立达信物联科技股份有限公司</p>
+                    <p><strong>客户/场景：</strong>大规模 LoRaWAN 设备与批量 OTA、集群化管理（含安灯等物流场景）。</p>
+                    <p><strong>交付成果：</strong></p>
+                    <ul>
+                        <li>网络延迟 400ms→150ms，通信成功率 95%→99.99%，TPS 6→10，批量 OTA 83%→95%。</li>
+                        <li>10 万+ 节点规模，整链路延迟 &lt;150ms，故障率 &lt;0.1%，仓储物流效率提升约 25%。</li>
+                        <li>设备统一管理与集群化，稳定性与可靠性显著提升；跨时区客户支持与线上调试保障。</li>
+                    </ul>
+                    <div class="tech-stack">
+                        <span class="tech">LoRaWAN</span>
+                        <span class="tech">FOTA</span>
+                        <span class="tech">集群化</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3><a href="https://oliverhuang0619.github.io/ffo" target="_blank" rel="noopener noreferrer">FFO 应用框架 · 平台产品</a></h3>
+                    <p class="project-desc">2022.06 - 2024.12 | 立达信物联科技股份有限公司</p>
+                    <p><strong>客户/场景：</strong>内部多产品线对跨芯片、模块化固件开发平台的需求。</p>
+                    <p><strong>交付成果：</strong></p>
+                    <ul>
+                        <li>FFO 框架 + CBB 公用模块：3 大产品线复用，代码复用率 +80%，缺陷率同比 -35%。</li>
+                        <li>平台项目使用率约 60%，100+ CBB 组件，多款产品 365 天稳定运行。</li>
+                        <li>HAL/OSAL 分层与 MLOOP 调度，新人上手周期缩短至约 2 周，新品类接入周期缩短；获 2022 年公司技术创新奖。</li>
+                    </ul>
+                    <div class="tech-stack">
+                        <span class="tech">FFO</span>
+                        <span class="tech">CBB</span>
+                        <span class="tech">HAL/OSAL</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>ACK (Alexa Connect Kits) · 多品类智能设备</h3>
+                    <p class="project-desc">2022.10 - 至今 | 立达信物联科技股份有限公司</p>
+                    <p><strong>客户/场景：</strong>连接 Alexa 的智能灯泡、开关、插座等，Matter over Wi-Fi，海外认证与批量交付。</p>
+                    <p><strong>交付成果：</strong></p>
+                    <ul>
+                        <li>Alexa 智能插座（ESP32C3）：语音响应 &lt;0.8s，用户满意度提升约 40%，年出货 50 万台+。</li>
+                        <li>Matter 统一框架：支持开关/照明/温控等多品类，固件交付周期缩短约 60%。</li>
+                        <li>CI/CD 与 AI 赋能：构建与流水线耗时大幅缩短，代码缺陷密度显著下降；行为规范（Matter Cluster、按键/LED、OTA/Metric），多品类认证与体验一致，支撑海外定制与批量交付。</li>
+                    </ul>
+                    <div class="tech-stack">
+                        <span class="tech">ACK</span>
+                        <span class="tech">ESP32-C3</span>
+                        <span class="tech">Matter</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>光速达 · 智能家居与酒店</h3>
+                    <p class="project-desc">2015.06 - 2019.09 | 嵌入式软件工程师</p>
+                    <p><strong>客户/场景：</strong>OMP 中控、智能开关、智慧酒店等。</p>
+                    <p><strong>交付成果：</strong>8 类设备跨品牌接入、场景联动 &lt;500ms、客户投诉率 -60%、市场占有率提升至 25%；5 款酒店设备、2000+ 客房、功耗 -30%、节能效率 +22%。</p>
+                    <div class="tech-stack">
+                        <span class="tech">OMP</span>
+                        <span class="tech">智能开关</span>
+                        <span class="tech">智慧酒店</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>福建汇兴 · 嵌入式设备与驱动</h3>
+                    <p class="project-desc">2014.01 - 2015.06 | 嵌入式工程师</p>
+                    <p><strong>客户/场景：</strong>温度采集器、电弧检测、手持终端等。</p>
+                    <p><strong>交付成果：</strong>底层驱动与协议、软硬件联调与文档规范，保障性能与可追溯性。</p>
+                    <div class="tech-stack">
+                        <span class="tech">驱动</span>
+                        <span class="tech">RF/GPS/NTC/TFT</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">能力规格</h2>
             <div class="skills-grid">
                 <div class="skill-card">
                     <h3>编程语言 / 脚本</h3>
@@ -50,7 +138,7 @@
                         <span class="tag">C++</span>
                         <span class="tag">Python</span>
                         <span class="tag">Shell / Bash</span>
-                        <span class="tag">C语言面向对象设计</span>
+                        <span class="tag">C 面向对象设计</span>
                     </div>
                 </div>
                 <div class="skill-card">
@@ -62,7 +150,7 @@
                         <span class="tag">Nordic</span>
                         <span class="tag">ESP32</span>
                         <span class="tag">ESP32-C3/C6</span>
-                        <span class="tag">树莓派Raspberry Pi</span>
+                        <span class="tag">树莓派</span>
                         <span class="tag">国民技术</span>
                         <span class="tag">瑞芯微</span>
                         <span class="tag">全志</span>
@@ -79,7 +167,7 @@
                     </div>
                 </div>
                 <div class="skill-card">
-                    <h3>通信协议 / 总线 </h3>   
+                    <h3>通信协议 / 总线</h3>
                     <div class="skill-tags">
                         <span class="tag">Wi-Fi</span>
                         <span class="tag">BLE</span>
@@ -94,7 +182,7 @@
                     </div>
                 </div>
                 <div class="skill-card">
-                    <h3>智能产品</h3>   
+                    <h3>智能产品</h3>
                     <div class="skill-tags">
                         <span class="tag">智能插座</span>
                         <span class="tag">智能开关</span>
@@ -106,198 +194,38 @@
                     </div>
                 </div>
                 <div class="skill-card">
-                    <h3>工具 / 其他</h3>
+                    <h3>工具 / 云平台</h3>
                     <div class="skill-tags">
                         <span class="tag">AI+</span>
                         <span class="tag">Git</span>
-                        <span class="tag">CI/CD自动化</span>
+                        <span class="tag">CI/CD 自动化</span>
                         <span class="tag">Docker</span>
-                        <span class="tag">阿里云 / 腾讯云 IoT/AWS IoT</span>
+                        <span class="tag">阿里云 IoT</span>
+                        <span class="tag">腾讯云 IoT</span>
+                        <span class="tag">AWS IoT</span>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- 工作经历 -->
-        <section class="section">
-            <h2 class="section-title">工作经历</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">2019.10 - 至今</div>
-                    <div class="timeline-content">
-                        <h3>软件技术经理</h3>
-                        <p class="company">立达信物联科技股份有限公司</p>
-                        <ul class="achievements">
-                            <li>
-                                <strong>一、技术创新与核心项目</strong>
-                                <ul>
-                                    <li>智能硬件开发：主导 ESP32C3 平台 Alexa 智能插座开发，实现语音控制响应速度小于 0.8s，用户交互满意度提升约 40%，产品年出货量超 50 万台。</li>
-                                    <li>Matter 协议栈：构建支持开关、照明、温控器等多品类的统一软件框架，设计自动化编译系统，将固件交付周期整体缩短约 60%。</li>
-                                    <li>LoRaWAN 安灯系统：设计低功耗设备组网方案，覆盖 10 万+ 物流推车节点，整链路往返延迟控制在 150ms 内，故障率小于 0.1%，仓储物流效率提升约 25%。</li>
-                                </ul>
-                            </li>
-                            <li>
-                                <strong>二、底层架构设计</strong>
-                                <ul>
-                                    <li>FFO 应用框架：负责模块化应用框架（任务调度、硬件抽象层等）的设计与落地，被 3 大产品线复用，新人上手周期缩短至约 2 周，项目获 2022 年公司技术创新奖。</li>
-                                    <li>CBB 公用模块：规划并建设标准化驱动与脚本组件库，代码复用率提升约 80%，缺陷率同比下降约 35%。</li>
-                                </ul>
-                            </li>
-                            <li>
-                                <strong>三、技术管理与效能革新</strong>
-                                <ul>
-                                    <li>开发效能：搭建基于服务器性能的编译缓存与构建系统，整体编译时间缩短约 70%，CI/CD 流水线耗时由约 45 分钟压缩至约 12 分钟。</li>
-                                    <li>AI 赋能：引入 Cursor/Krio 编辑器与 SonarQube 静态检查，代码缺陷密度由约 12 缺陷/千行降至约 4 缺陷/千行，代码评审通过率显著提升。</li>
-                                    <li>知识体系：搭建部门 Wiki 与图书借阅体系，定期组织技术分享与复盘，提升团队整体技术沉淀。</li>
-                                </ul>
-                            </li>
-                            <li>
-                                <strong>四、端到端项目管理</strong>
-                                <ul>
-                                    <li>技术方案输出：在项目立项与启动阶段，负责输出包含 IC 选型、软件架构设计及开发计划在内的整体技术方案，为项目实施提供清晰、可靠的技术路径。</li>
-                                    <li>项目进度管理：通过全程跟踪关键里程碑与风险点，实时监控开发进度并动态调整节奏，在保证质量的前提下严格控制迭代周期，实现高质量按期交付。</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-date">2015.06 - 2019.09</div>
-                    <div class="timeline-content">
-                        <h3>嵌入式软件工程师</h3>
-                        <p class="company">光速达物联网科技股份有限公司</p>
-                        <ul class="achievements">
-                            <li>负责OMP中央控制系统设备管控引擎的研发,实现开关、传感器、安防等8类设备的跨品牌兼容接入,提升平台兼容性至行业领先水平。</li>
-                            <li>设计并优化场景化联动协议,支持用户自定义自动化规则,实现500ms内高效响应,成功应用于多个高端地产智能家居项目。</li>
-                            <li>主导智能开关产品线(照明、窗帘、调光等)全系嵌入式软件开发,集成多控关联技术(专利受理中),显著降低客户投诉率60%。</li>
-                            <li>深度集成OMP平台与智能开关产品,推动"回家模式"等多场景自动化落地,助力产品市场占有率提升至25%。</li>
-                            <li>独立开发智慧酒店取电开关、门牌控制器等5款设备,实现单设备功耗降低30%,累计部署超过2000间客房,并创新实现网关指纹锁双向认证及远程开锁等功能,提升用户节能效率22%。</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-date">2014.01 - 2015.06</div>
-                    <div class="timeline-content">
-                        <h3>嵌入式工程师</h3>
-                        <p class="company">福建汇兴智能化科技有限公司</p>
-                        <ul class="achievements">
-                            <li>负责温度采集器、电弧检测器及手持终端等嵌入式设备的驱动程序开发与功能实现,确保产品性能与稳定性满足项目需求。</li>
-                            <li>深入参与RF芯片、GPS模块、NTC温度传感器、TFT LCD等硬件接口的底层驱动开发与调试,提升系统集成度与兼容性。</li>
-                            <li>参与无线通信协议的设计、开发与维护,优化数据传输效率与系统通信的可靠性。</li>
-                            <li>配合硬件工程师进行软硬件联调,分析并解决嵌入式系统开发过程中出现的技术问题。</li>
-                            <li>编写和维护相关技术文档,包括驱动开发说明、接口协议文档及测试用例,保障项目开发的规范性与可追溯性。</li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="content" style="margin-top: 20px;">
+                <p><strong>教育：</strong>福建师范大学协和学院 · 电子信息科学与技术（本科）· 2010.09 - 2014.06。</p>
             </div>
         </section>
 
-        <!-- 项目经验 -->
         <section class="section">
-            <h2 class="section-title">项目经验</h2>
-            <div class="projects">
-                <div class="project-card">
-                    <h3>CartSBL 项目</h3>
-                    <p class="project-desc"> 2025.04 - 至今 | 立达信物联科技股份有限公司</p>
-                    <p><strong>项目描述：</strong></p>
-                    <p style="margin-bottom: 10px;">围绕系统架构进行深度优化，成功突破关键技术瓶颈：将 LoRaWAN 网络延迟由 400ms 降低至 150ms，通信成功率从 95% 提升至 99.99%，系统并发能力由 TPS=6 提升至 TPS=10，批量 OTA 成功率由 83% 提升至 95%。同时优化设备统一管理方案，引入集群化管理机制，显著提升软件运行的稳定性与可靠性。在客户服务方面，克服时差问题，多次在深夜配合客户开展线上调试，保障系统稳定运行。</p>
-                    <p><strong>主要职责：</strong></p>
-                    <ul>
-                        <li>系统开发部署</li>
-                        <li>LoRaWAN网络通信优化</li>
-                        <li>自动化测试工具开发</li>
-                        <li>中英文文档输出</li>
-                        <li>客户服务,技术支持</li>
-                        <li>项目管理</li>
-                        <li>终端设备软件框架设计</li>
-                    </ul>
-                    <div class="tech-stack">
-                        <span class="tech">LoRaWAN</span>
-                        <span class="tech">系统架构优化</span>
-                        <span class="tech">批量FOTA固件升级</span>
-                        <span class="tech">集群化管理</span>
-                        <span class="tech">网络延迟低,通信成功率高</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <h3><a href="https://oliverhuang0619.github.io/ffo" target="_blank" rel="noopener noreferrer">FFO 应用框架平台</a></h3>
-                    <p class="project-desc">2022.06 - 2024.12 | 立达信物联科技股份有限公司</p>
-                    <p><strong>项目描述：</strong></p>
-                    <p style="margin-bottom: 10px;">负责 FFO 应用框架平台的设计与落地，该平台面向 IoT 设备，提供跨芯片、模块化的嵌入式固件开发能力，通过统一 HAL/OSAL 抽象、CBB 组件库和配置工具，帮助项目团队快速构建高质量固件应用。平台在公司内部项目中的使用率达到约 60%，累计沉淀 100+ 个可复用 CBB 组件，支撑多款产品实现全年 365 天稳定运行。</p>
-                    <p><strong>主要职责：</strong></p>
-                    <ul>
-                        <li>主导 FFO 平台总体架构设计，规划 HAL/OSAL 分层、组件化模型以及配置管理机制。</li>
-                        <li>设计跨芯片抽象层与驱动框架，支持多家 MCU 平台快速迁移，降低新项目移植成本。</li>
-                        <li>规划并实现 100+ CBB 公共组件库，覆盖设备管理、通信协议、日志、配置等模块，提升代码复用率与一致性。</li>
-                        <li>引入事件驱动的 MLOOP 调度机制及低功耗、快速启动等能力，提升系统运行效率与可扩展性。</li>
-                        <li>输出平台开发文档、示例工程与最佳实践指引，组织内部培训与推广，提升团队对 FFO 的理解和使用效率。</li>
-                    </ul>
-                    <div class="tech-stack">
-                        <span class="tech">FFO</span>
-                        <span class="tech">CBB 模块化</span>
-                        <span class="tech">跨芯片平台</span>
-                        <span class="tech">MLOOP 调度</span>
-                        <span class="tech">HAL / OSAL</span>
-                        <span class="tech">IoT 设备</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <h3>ACK (Alexa Connect Kits) 项目集</h3>
-                    <p class="project-desc">2022.10 - 至今 | 立达信物联科技股份有限公司</p>
-                    <p><strong>项目描述：</strong></p>
-                    <p style="margin-bottom: 10px;">基于亚马逊 ACK 生态的连接 Alexa 的智能设备开发平台，覆盖智能灯泡、智能开关、智能插座等多条产品线，统一软件架构与工程体系，支持 Matter over Wi-Fi 及 BLE 配网。负责从底层驱动、Matter 协议栈到应用层交互的完整技术方案设计，保障多品类产品在认证、兼容性与用户体验上的一致性，并支撑海外客户定制与批量交付。</p>
-                    <p><strong>主要职责：</strong></p>
-                    <ul>
-                        <li>主导 ACK 项目集软件框架与工程搭建：设计跨产品线可复用的代码结构、构建系统与配置管理，基于 ESP32-C3 等平台统一 HAL/应用分层，缩短新品类接入周期。</li>
-                        <li>构建并维护 CI/CD 自动化流程：包括编译、静态检查、单元测试与固件打包，实现多分支并行构建与版本可追溯，提升发布效率与质量稳定性。</li>
-                        <li>定义并落地产品行为规范：牵头 Matter Cluster 映射、按键逻辑、LED 场景与状态定义，以及 OTA、Metric 等可观测性规范，确保与 Alexa/Matter 生态的合规与一致体验。</li>
-                        <li>负责项目管理与技术支持：进行任务拆解、排期与风险识别，协调硬件、测试与客户侧资源；对关键问题做技术攻关与根因分析，保障项目按期高质量交付。</li>
-                    </ul>
-                    <div class="tech-stack">
-                        <span class="tech">ACK</span>
-                        <span class="tech">ESP32-C3</span>
-                        <span class="tech">Matter</span>
-                        <span class="tech">Wi-Fi</span>
-                        <span class="tech">BLE</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 教育背景 -->
-        <section class="section">
-            <h2 class="section-title">教育背景</h2>
-            <div class="education">
-                <div class="education-item">
-                    <h3>电子信息科学与技术（本科）</h3>
-                    <p class="company">福建师范大学协和学院 | 2010.09 - 2014.06</p>
-                    <p class="education-desc">主修课程：C 语言程序设计、C++、数据结构、模拟电子技术、数字电路、单片机原理与接口技术、信号与系统、通信原理、嵌入式系统设计等。</p>
-                    <p class="education-desc">在校期间多次参加电子设计竞赛及多次获得奖学金，具备扎实的理论基础和良好的动手能力。</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- 个人优势 -->
-        <section class="section">
-            <h2 class="section-title">自我评价</h2>
+            <h2 class="section-title">为什么选我</h2>
             <div class="content">
                 <ul class="achievements">
-                    <li>10年+嵌入式及物联网研发经验，熟悉产品从立项、研发到量产的全生命周期管理，能够独立承担核心模块设计与实现。</li>
-                    <li>重视代码规范和架构设计，关注可维护性和扩展性，善于通过抽象与模块化设计提升团队整体开发效率。</li>
-                    <li>沟通协调能力较强，能够在与硬件、测试、生产及客户的多方协作中推动问题闭环，乐于分享经验和指导新人。</li>
-                    <li>对新技术保持持续学习热情，善于总结归纳，在高压力环境下依然能够保持稳定、高效的工作状态。</li>
+                    <li>10 年+ 嵌入式与物联网交付经验，从驱动到平台均有落地，能独立扛核心模块与系统方案。</li>
+                    <li>重视可维护性与可扩展性，用抽象与自动化减少重复劳动，让团队把时间花在创新和业务上。</li>
+                    <li>能与硬件、测试、生产、客户高效协作，推动问题闭环，并愿意带人和分享。</li>
+                    <li>持续学习、善于总结，在高压力下仍能稳定输出、按期交付。</li>
                 </ul>
             </div>
         </section>
 
-        <!-- 页脚 -->
         <footer class="footer">
-            <p>© 2026 黄志文 | 嵌入式软件工程师</p>
-            <p class="footer-note">本简历仅用于求职展示</p>
+            <p>© 2026 黄志文 | 嵌入式软件经理/架构师</p>
+            <p class="footer-note">产品化简历 v2 · 仅用于求职展示</p>
         </footer>
     </div>
 

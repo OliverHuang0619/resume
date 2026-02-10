@@ -2882,7 +2882,241 @@ So the user wants to REMOVE the combined "立达信 IoT · 智能硬件与平台
 
 So I need to:
 1. Delete the first card "立达信 IoT · 智能硬件与平台" entirely.
-2. Enrich CartSBL card with any LoRaWAN 安灯 points if not already there (e.g. 10万+节点, 延迟<150ms, 故障率<0.1%, 仓储效</details></think>
+2. Enrich CartSBL card with any LoRaWAN 安灯 points if not already there (e.g. 10万+节点, 延迟<150ms, 故障率<0.1%, 仓储效率+25%).
+3. Enrich FFO card with FFO + CBB details (3大产品线复用, 代码复用率+80%, 缺陷率-35%, 新人上手2周, 2022技术创新奖).
+4. Enrich ACK card with Alexa 智能插座 (语音<0.8s, 满意度+40%, 年出货50万+), Matter 固件交付周期-60%, and CI/CD、AI赋能 (构建时间、缺陷密度等).
+
+Let me read the current state of the three cards in index_v2.html to see what's already there and what to add.
+</details></think>
+
+---
+
+
+将「智能硬件与平台」的交付成果拆入 CartSBL、FFO、ACK 三张卡片，并删除合并的那张。
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: e:\03-个人资料\简历\index_v2.html</summary>
+
+</details>
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+
+I need to:
+1. Remove the first card "立达信 IoT · 智能硬件与平台" (lines 54-74).
+2. Enrich CartSBL with LoRaWAN 安灯 type outcomes: 10万+节点, 延迟<150ms, 故障率<0.1%, 仓储效率+25% - actually CartSBL already has 网络延迟 400ms→150ms etc. I can add one line about 10万+节点、故障率<0.1%、仓储效率 if they're not redundant.
+3. Enrich FFO with: 3大产品线复用, 代码复用率+80%, 缺陷率-35%, 新人上手2周, 2022技术创新奖.
+4. Enrich ACK with: Alexa 智能插座 语音<0.8s、满意度+40%、年出货50万+, Matter 固件交付周期-60%, CI/CD 与 AI 赋能（构建与流水线缩短、缺陷密度下降）.
+</details></think>
+
+---
+
+
+
+
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
+
+<details><summary>Tool use: **edit_file_v2** • Edit file: e:\03-个人资料\简历\index_v2.html</summary>
+
+</details>
+
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+
+Now do the same for index_v2_en.html - remove the combined "Leedarson IoT · Smart Hardware & Platform" card and merge its content into CartSBL, FFO, and ACK.
+</details></think>
+
+---
+
+
+正在同步修改英文版 `index_v2_en.html`：
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: e:\03-个人资料\简历\index_v2_en.html</summary>
+
+</details>
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+
+I'll do the same replacement for the English file.
+</details></think>
+
+---
+
+
+
+
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
+
+<details><summary>Tool use: **edit_file_v2** • Edit file: e:\03-个人资料\简历\index_v2_en.html</summary>
+
+</details>
+
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+
+Done. I've removed the combined "立达信 IoT · 智能硬件与平台" / "Leedarson IoT · Smart Hardware & Platform" card and distributed its content into CartSBL, FFO, and ACK in both index_v2.html and index_v2_en.html.
+</details></think>
+
+---
+
+
+已按你的要求，把「智能硬件与平台」的交付成果拆到 CartSBL、FFO、ACK 三张卡片，并删掉合并的那张。
+
+**本次修改：**
+
+1. **删除**  
+   - 原「立达信 IoT · 智能硬件与平台」/「Leedarson IoT · Smart Hardware & Platform」整张卡片已移除。
+
+2. **CartSBL**（物流与系统优化）  
+   - 保留并突出 LoRaWAN/安灯相关：网络延迟、通信成功率、TPS、批量 OTA。  
+   - 补充：10 万+ 节点、整链路延迟 &lt;150ms、故障率 &lt;0.1%、仓储物流效率 +25%。  
+   - 保留：设备统一管理与集群化、跨时区客户支持。  
+   - 交付成果改为 3 条列表展示。
+
+3. **FFO**（应用框架 · 平台产品）  
+   - 补充：FFO + CBB、3 大产品线复用、代码复用率 +80%、缺陷率 -35%。  
+   - 保留：60% 使用率、100+ CBB、365 天稳定运行。  
+   - 补充：HAL/OSAL、MLOOP、新人上手约 2 周、2022 年公司技术创新奖。  
+   - 交付成果改为 3 条列表展示。
+
+4. **ACK**（多品类智能设备）  
+   - 补充：Alexa 智能插座（ESP32C3）、语音 &lt;0.8s、满意度 +40%、年出货 50 万+。  
+   - 补充：Matter 统一框架、固件交付周期 -60%。  
+   - 补充：CI/CD 与 AI 赋能、构建与流水线缩短、缺陷密度下降；行为规范与多品类认证、海外定制与批量交付。  
+   - 交付成果改为 3 条列表展示。
+
+**英文版**  
+- `index_v2_en.html` 已做相同拆分与补充，对应上述三条卡片。
+
+现在交付成果里不再有「智能硬件与平台」合并卡，相关内容都归在 CartSBL、FFO、ACK 下。刷新 `index_v2.html` / `index_v2_en.html` 即可查看。
+
+---
+
+_**User**_
+
+将v2改成默认的index.html,原先的改成v1
+
+---
+
+_**Agent (model default, mode Agent)**_
+
+<think><details><summary>Thought Process</summary>
+
+The user wants to:
+1. Make v2 the default - so index_v2.html content should become index.html, and index_v2_en.html should become index_en.html
+2. The original index.html should be renamed/saved as v1 - so index.html → index_v1.html, and index_en.html → index_v1_en.html
+
+So I need to:
+1. Read index.html and index_en.html (current content)
+2. Create index_v1.html with the current index.html content
+3. Create index_v1_en.html with the current index_en.html content
+4. Read index_v2.html and index_v2_en.html
+5. Overwrite index.html with index_v2.html content (but fix the links: index_v2_en.html → index_en.html, and any link to index_v2.html should be index.html)
+6. Overwrite index_en.html with index_v2_en.html content (fix links: index_v2.html → index.html)
+
+Let me do this carefully. First I'll read the current index.html and index_en.html to save as v1, then read v2 files to use as new index.
+</details></think>
+
+---
+
+
+将 v2 设为默认（index / index_en），原版另存为 v1（index_v1 / index_v1_en）。
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: e:\03-个人资料\简历\index.html</summary>
+
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: e:\03-个人资料\简历\index_en.html</summary>
+
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: e:\03-个人资料\简历\index_v2.html</summary>
+
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: e:\03-个人资料\简历\index_v2_en.html</summary>
+
+</details>
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+
+I see that index_v2.html has some differences from what I had in my earlier context - the name is "黄志文Oliver" and title says "Oliver Huang". I'll use the content as read. Now I need to:
+
+1. Write current index.html content to index_v1.html, and change the lang switcher in index_v1.html from "index_en.html" to "index_v1_en.html"
+2. Write current index_en.html content to index_v1_en.html, and change the lang switcher from "index.html" to "index_v1.html"
+3. Write index_v2.html content to index.html, changing:
+   - title to "黄志文 - 个人简历" (or keep product style, user said v2 as default so keep the product style)
+   - lang switcher from index_v2_en.html to index_en.html
+   - footer note can say "本简历仅用于求职展示" (remove "产品化简历 v2")
+   - Fix the name "黄志文Oliver" -> "黄志文" in the v2 content when writing to index.html
+4. Write index_v2_en.html content to index_en.html, changing:
+   - lang switcher from index_v2.html to index.html
+   - footer note "Resume for job application only" (remove "Product resume v2")
+5. Update index_v2.html to point to index_en.html (so v2 and default stay in sync - actually after we overwrite index with v2, we can delete or keep index_v2. The user said "v2改成默认的index.html", so index.html = v2 content. They also said "原先的改成v1", so original index -> index_v1.html. We could keep index_v2 as a copy or remove it. I'll keep index_v2.html and index_v2_en.html but update their switchers to point to index.html and index_en.html so that v2 pages also work as alternate entry points. So: index_v2.html switcher: EN -> index_en.html (default EN). index_v2_en.html switcher: 中文 -> index.html. That way both index and index_v2 open the same "product" resume, and index_v1/index_v1_en open the original.
+
+Let me do:
+1. Create index_v1.html with original index.html content; in it change <a href="index_en.html" to <a href="index_v1_en.html"
+2. Create index_v1_en.html with original index_en.html content; change <a href="index.html" to <a href="index_v1.html"
+3. Overwrite index.html with v2 content; change index_v2_en.html -> index_en.html, and fix name 黄志文Oliver -> 黄志文, title to 黄志文 - 个人简历, footer to 本简历仅用于求职展示
+4. Overwrite index_en.html with v2 en content; change index_v2.html -> index.html, footer to "Resume for job application only"
+5. Update index_v2.html: change index_v2_en.html -> index_en.html (so EN goes to default EN page)
+6. Update index_v2_en.html: change index_v2.html -> index.html (so 中文 goes to default 中文 page)
+
+This way: index.html & index_en.html = product resume (v2 content), default. index_v1.html & index_v1_en.html = original classic resume. index_v2.html & index_v2_en.html = same as index (product resume), can keep for reference or remove - I'll keep and just fix links so they're aliases.
+</details></think>
+
+---
+
+
+正在将原版另存为 v1，并把 v2 写为默认的 index / index_en；同时修正 v2 内的链接与标题、姓名。
+
+
+---
+
+Cancelled
 
 ---
 
