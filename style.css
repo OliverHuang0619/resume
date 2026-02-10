@@ -698,8 +698,60 @@ body {
 
     .header {
         background: var(--primary-color);
+        padding: 24px 32px;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
+    }
+
+    .header .profile-section {
+        gap: 20px;
+    }
+
+    .header .avatar-placeholder {
+        width: 72px;
+        height: 72px;
+    }
+
+    .header .profile-info h1 {
+        font-size: 26px;
+    }
+
+    .header .profile-info .motto {
+        font-size: 12px;
+    }
+
+    .header .profile-info .title {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    .header .contact-info {
+        font-size: 12px;
+        gap: 16px;
+    }
+
+    .value-proposition-block {
+        page-break-inside: avoid;
+    }
+
+    .value-proposition-block .section {
+        padding: 16px 32px 20px;
+    }
+
+    .value-proposition-block .section-title {
+        font-size: 22px;
+        margin-bottom: 12px;
+        padding-bottom: 8px;
+    }
+
+    .value-proposition-block .content p,
+    .value-proposition-block .achievements li {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .value-proposition-block .achievements li {
+        padding: 4px 0 4px 20px;
     }
 
     .section {
