@@ -89,10 +89,28 @@ body {
     display: block;
 }
 
+.profile-info .name-block {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
 .profile-info h1 {
     font-size: 42px;
-    margin-bottom: 10px;
+    margin-bottom: 0;
     font-weight: 700;
+}
+
+.profile-info .motto {
+    position: absolute;
+    left: 100%;
+    bottom: 0;
+    margin-left: 12px;
+    margin-bottom: 0;
+    font-size: 13px;
+    font-style: italic;
+    opacity: 0.9;
+    white-space: nowrap;
 }
 
 .title {
