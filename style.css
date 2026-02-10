@@ -67,6 +67,26 @@ body {
     border-radius: 50%;
 }
 
+.lang-switcher {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    z-index: 10;
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 6px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.lang-switcher:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
 .profile-section {
     display: flex;
     align-items: center;
