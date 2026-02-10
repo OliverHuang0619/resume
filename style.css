@@ -145,6 +145,8 @@ body {
     flex-wrap: wrap;
     font-size: 14px;
     opacity: 0.9;
+    justify-content: flex-start;
+    text-align: left;
 }
 
 .contact-info .contact-item {
@@ -156,10 +158,13 @@ body {
 .contact-info .contact-icon {
     font-style: normal;
     flex-shrink: 0;
+    min-width: 1.2em;
+    text-align: left;
 }
 
 .contact-info .contact-text {
     word-break: break-all;
+    text-align: left;
 }
 
 /* 章节样式 */
@@ -627,9 +632,10 @@ body {
     .contact-info {
         flex-direction: column;
         gap: 10px;
-        align-items: stretch;
+        align-items: flex-start;
         width: 100%;
         max-width: 100%;
+        text-align: left;
     }
 
     .contact-info .contact-item {
@@ -637,11 +643,14 @@ body {
         align-items: center;
         gap: 10px;
         min-height: 24px;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .contact-info .contact-icon {
         width: 22px;
-        text-align: center;
+        min-width: 22px;
+        text-align: left;
         flex-shrink: 0;
     }
 
@@ -649,6 +658,7 @@ body {
         flex: 1;
         min-width: 0;
         word-break: break-all;
+        text-align: left;
     }
 
     .section {
