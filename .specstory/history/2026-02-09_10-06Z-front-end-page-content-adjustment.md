@@ -2016,6 +2016,279 @@ I'll create index_en.html with full English content. It will be quite long. Then
 
 <details><summary>Tool use: **edit_file_v2** • Edit file: e:\03-个人资料\简历\index_en.html</summary>
 
+</details>
+
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+
+Now I need to add the language switcher to the Chinese index.html - a link to index_en.html (e.g. "EN" or "English"). I'll add it in the header, and add CSS for .lang-switcher so it's visible (e.g. top-right, white text on the blue header).
+</details></think>
+
+---
+
+
+
+
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
+
+<details><summary>Tool use: **edit_file_v2** • Edit file: e:\03-个人资料\简历\index.html</summary>
+
+</details>
+
+</tool-use>
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: e:\03-个人资料\简历\style.css</summary>
+
+</details>
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+
+I need to add CSS for .lang-switcher. It should be positioned in the top-right of the header, visible (white or light color), and look like a small link/button. I'll add it after .header::before and make the header position: relative so the absolute positioning of the switcher works.
+</details></think>
+
+---
+
+
+
+
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
+
+<details><summary>Tool use: **edit_file_v2** • Edit file: e:\03-个人资料\简历\style.css</summary>
+
+</details>
+
+</tool-use>
+
+---
+
+<tool-use data-tool-type="task" data-tool-name="todo_write">
+<details><summary>Tool use: **todo_write** • Todo List</summary>
+
+- [x] Create index_en.html with English resume content
+- [x] Add language switcher to index.html and index_en.html
+
+</details>
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+
+index_en.html already has the language switcher (中文 link). Both files now have the switcher. Let me double-check that the English page has the switcher in the same position - I put it inside the header as the first child. Good. Done.
+</details></think>
+
+---
+
+
+已完成以下修改：
+
+**1. 新建 `index_en.html`（英文简历）**
+- 结构与 `index.html` 一致，内容为英文。
+- 包含：Summary、Skills、Work Experience、Projects、Education、Self Evaluation。
+- 工作经历、项目经历与中文版对应（立达信 / 光速达 / 汇兴，CartSBL、FFO、ACK）。
+- 教育、联系方式、座右铭等已翻译；FFO 外链保留。
+
+**2. 中英文切换**
+- **中文页 `index.html`**：在头部右上角增加 **EN** 链接，指向 `index_en.html`。
+- **英文页 `index_en.html`**：在头部右上角增加 **中文** 链接，指向 `index.html`。
+
+**3. 样式 `style.css`**
+- 新增 `.lang-switcher`：绝对定位于 header 右上角，白字、细边框、圆角，悬停时半透明白底，与现有头部样式统一。
+
+两页共用 `style.css` 和 `script.js`，点击右上角 EN/中文 即可在中文简历与英文简历之间切换。如需改文案或样式可以再说。
+
+---
+
+_**User**_
+
+手机端显示不完整,另外其他信息的显示要对齐.
+
+---
+
+_**Agent (model default, mode Agent)**_
+
+<think><details><summary>Thought Process</summary>
+
+The user is reporting two issues based on the mobile view screenshot:
+1. 手机端显示不完整 - Mobile display is incomplete (content gets cut off or doesn't display fully on mobile)
+2. 其他信息的显示要对齐 - Other information display needs to be aligned (contact info block - age, residence, phone, email should be properly aligned)
+
+I need to:
+1. Improve responsive/mobile CSS so content doesn't get cut off - likely need to adjust padding, font sizes, and ensure the header and contact info wrap/stack properly on small screens
+2. Align the contact info - make sure the icons and text are consistently aligned (e.g. same left alignment for text, consistent spacing between icon and text)
+
+Let me read the current style.css for the header, profile, contact-info, and any media queries for max-width 768px.
+</details></think>
+
+---
+
+
+正在优化手机端显示完整性并对齐联系信息，先查看当前的头部与响应式样式。
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: e:\03-个人资料\简历\style.css</summary>
+
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: e:\03-个人资料\简历\style.css</summary>
+
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: e:\03-个人资料\简历\index.html</summary>
+
+</details>
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+
+I need to:
+1. Make contact-info display in a stacked/aligned way on mobile - each row: icon + label: value, with consistent alignment. Currently it's flex with gap, so on narrow screens items wrap. I'll change to a list-like layout for contact so each item is on its own line with icon and text aligned.
+2. Add mobile-specific styles: reduce header padding, ensure name+motto don't overflow (motto can wrap or go below on small screens), give header more horizontal padding so content isn't cut off.
+3. Align "其他信息" - the contact info. I'll use a structure where each contact item is display flex with a fixed/min width for the icon part so text aligns. Or use a simple grid/list with each row having icon + text aligned left.
+
+Let me read the rest of the mobile media query and the contact-info styles.
+</details></think>
+
+---
+
+
+
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: e:\03-个人资料\简历\style.css</summary>
+
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: e:\03-个人资料\简历\style.css</summary>
+
+</details>
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+
+I'll:
+1. Change contact-info to a list-style layout so each item is one row with icon + text aligned. Use display: grid or flex with each span as a row, and make the contact items use a consistent structure - e.g. wrap each in a div.contact-item with icon + text so we can align. But the HTML uses spans - so I'll do it with CSS: make .contact-info display: grid; grid-template-columns: auto 1fr on mobile isn't possible with current HTML since each span has both icon and text. So either change HTML to have each row as a div with icon span + text span, or use CSS to make spans block and align. Actually the simplest is: on mobile .contact-info { display: flex; flex-direction: column; align-items: flex-start; } and each span we can give a consistent left padding so the text after the emoji aligns. But the emojis have different widths. So use a two-column grid: first column for icon (fixed width), second for text. That requires HTML change: wrap each in .contact-item with .contact-icon and .contact-text. Let me do that in HTML and then CSS.
+
+Actually re-reading the user message: "其他信息的显示要对齐" - they want the "other information" (年龄, 居住地, 手机, 邮箱) to be aligned. So the simplest approach without changing structure too much: make contact-info on mobile a vertical list with each span on its own line, and use a small grid so that the label part (年龄, 居住地, etc.) or the content part aligns. Currently each span is "🏷 年龄：35岁" - so we could use a consistent padding-left and display block so they stack and the text aligns. If we use flex with align-items: flex-start and a min-width on the first part... Actually the easiest is to use a list: ul with li for each, and each li has the same structure so the colon and value align. Let me change the HTML to use a list of contact items with a consistent format, then style so on mobile they align.
+
+Simpler approach: keep the spans but in the mobile media query set .contact-info to grid or to flex column with align-items: stretch and each span with text-align: left and a bit of padding so they're not flush to the edge. Also add word-break: break-all or overflow-wrap for long email so it doesn't overflow. And increase header padding on mobile so content doesn't touch the edges - e.g. padding: 40px 20px - but 20px might still be tight; use 24px or 28px. Also the name-block with motto - on mobile the motto might overflow because it's position absolute left 100%. So on mobile I'll make the name-block not inline-block, and put the motto below the name (display block) so it doesn't get cut off.
+</details></think>
+
+---
+
+
+修改 HTML 结构，使联系信息便于对齐；接着优化移动端样式，确保显示完整并对齐。
+
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
+
+<details><summary>Tool use: **edit_file_v2** • Edit file: e:\03-个人资料\简历\index.html</summary>
+
+</details>
+
+</tool-use>
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
+
+<details><summary>Tool use: **edit_file_v2** • Edit file: e:\03-个人资料\简历\style.css</summary>
+
+</details>
+
+</tool-use>
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
+
+<details><summary>Tool use: **edit_file_v2** • Edit file: e:\03-个人资料\简历\style.css</summary>
+
+</details>
+
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+
+I need to update the English page index_en.html to use the same contact-info structure so alignment works there too.
+</details></think>
+
+---
+
+
+正在同步更新英文页面的联系信息结构。
+
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
+
+<details><summary>Tool use: **edit_file_v2** • Edit file: e:\03-个人资料\简历\index_en.html</summary>
+
+</details>
+
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+
+On desktop, the contact-info is still flex with wrap - the .contact-item will show inline-flex with icon + text. So the desktop layout stays as before (multiple items in a row). On mobile we now have column layout with each item having icon (fixed 22px width) + text, so they align. I also made the motto on mobile position: static so it goes below the name and doesn't overflow. Let me add a bit more horizontal padding on very small screens so "居住地" doesn't touch the edge - we have 20px already. Maybe add padding to .profile-info on mobile so the contact block has inner padding.
+</details></think>
+
+---
+
+
+为移动端增加容器内边距，避免内容贴边。
+
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="edit_file_v2">
+
+<details><summary>Tool use: **edit_file_v2** • Edit file: e:\03-个人资料\简历\style.css</summary>
+
 Status: **loading**
 
 </details>

@@ -147,6 +147,21 @@ body {
     opacity: 0.9;
 }
 
+.contact-info .contact-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.contact-info .contact-icon {
+    font-style: normal;
+    flex-shrink: 0;
+}
+
+.contact-info .contact-text {
+    word-break: break-all;
+}
+
 /* 章节样式 */
 .section {
     padding: 50px 40px;
@@ -558,35 +573,96 @@ body {
     }
 
     .header {
-        padding: 40px 20px;
+        padding: 36px 20px 32px;
+        min-height: 0;
+    }
+
+    .lang-switcher {
+        top: 14px;
+        right: 14px;
+        padding: 5px 10px;
+        font-size: 13px;
     }
 
     .profile-section {
         flex-direction: column;
         text-align: center;
+        gap: 20px;
+    }
+
+    .profile-info {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 0 8px;
+    }
+
+    .profile-info .name-block {
+        display: block;
+        width: 100%;
+        margin-bottom: 12px;
     }
 
     .profile-info h1 {
-        font-size: 32px;
+        font-size: 28px;
+        display: block;
+    }
+
+    .profile-info .motto {
+        position: static;
+        display: block;
+        margin-top: 4px;
+        margin-left: 0;
+        white-space: normal;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .profile-info .title {
+        font-size: 16px;
+        margin-bottom: 14px;
+        text-align: center;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .contact-info .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        min-height: 24px;
+    }
+
+    .contact-info .contact-icon {
+        width: 22px;
+        text-align: center;
+        flex-shrink: 0;
+    }
+
+    .contact-info .contact-text {
+        flex: 1;
+        min-width: 0;
+        word-break: break-all;
     }
 
     .section {
-        padding: 30px 20px;
+        padding: 28px 20px;
     }
 
     .section-title {
-        font-size: 24px;
+        font-size: 22px;
     }
 
     .skills-grid,
     .projects,
     .advantages {
         grid-template-columns: 1fr;
-    }
-
-    .contact-info {
-        flex-direction: column;
-        gap: 10px;
     }
 
     .timeline {
