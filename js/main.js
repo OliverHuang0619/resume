@@ -99,27 +99,89 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // 项目卡片动画
+    // 项目卡片动画与弹窗
     const projectCards = document.querySelectorAll('.project-card');
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+    if (projectCards.length > 0) {
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        projectCards.forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(card);
+        });
+    }
+
+    // 项目详情弹窗交互
+    const projectModal = document.getElementById('projectModal');
+    const projectModalBody = document.getElementById('projectModalBody');
+    const projectModalClose = document.getElementById('projectModalClose');
+    const projectModalOverlay = projectModal?.querySelector('.project-modal-overlay');
+
+    function openProjectModal(card) {
+        if (!projectModal || !projectModalBody) return;
+        
+        const header = card.querySelector('.project-header')?.cloneNode(true);
+        const client = card.querySelector('.project-client')?.cloneNode(true);
+        const results = card.querySelector('.project-results')?.cloneNode(true);
+        const tags = card.querySelector('.project-tags')?.cloneNode(true);
+
+        projectModalBody.innerHTML = '';
+
+        [header, client, results, tags].forEach(block => {
+            if (block) {
+                projectModalBody.appendChild(block);
             }
         });
-    }, observerOptions);
-    
-    projectCards.forEach(card => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(20px)';
-        card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-        observer.observe(card);
+
+        projectModal.classList.add('active');
+        projectModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeProjectModal() {
+        if (!projectModal) return;
+        projectModal.classList.remove('active');
+        projectModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    }
+
+    if (projectCards.length > 0 && projectModal) {
+        projectCards.forEach(card => {
+            card.addEventListener('click', function(event) {
+                const target = event.target;
+                if (target.closest('a')) {
+                    return;
+                }
+                openProjectModal(card);
+            });
+        });
+    }
+
+    if (projectModalClose) {
+        projectModalClose.addEventListener('click', closeProjectModal);
+    }
+
+    if (projectModalOverlay) {
+        projectModalOverlay.addEventListener('click', closeProjectModal);
+    }
+
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            closeProjectModal();
+        }
     });
     
     // 联系表单处理（示例）

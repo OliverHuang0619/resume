@@ -42,7 +42,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1320px;
     margin: 0 auto;
     padding: 0 1.5rem;
 }
@@ -564,8 +564,8 @@ body {
 /* 项目案例 */
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
     margin-top: 3rem;
 }
 
@@ -574,12 +574,17 @@ body {
     border: 1px solid var(--border-color);
     border-radius: var(--radius-lg);
     padding: 2rem;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    cursor: pointer;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-lg);
+    border-color: rgba(37, 99, 235, 0.25);
 }
 
 .project-header {
@@ -591,6 +596,17 @@ body {
     font-weight: 600;
     color: var(--secondary-color);
     margin-bottom: 0.5rem;
+}
+
+.project-header h3 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.project-header h3 a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
 .project-period {
@@ -636,6 +652,19 @@ body {
     flex-wrap: wrap;
     gap: 0.5rem;
     margin-top: 1.5rem;
+    margin-top: auto;
+}
+
+@media (max-width: 1100px) {
+    .project-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .tag {
@@ -645,6 +674,77 @@ body {
     border-radius: 1rem;
     font-size: 0.875rem;
     font-weight: 500;
+}
+
+/* 项目详情弹窗 */
+.project-modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1100;
+}
+
+.project-modal.active {
+    display: flex;
+}
+
+.project-modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.55);
+    backdrop-filter: blur(6px);
+}
+
+.project-modal-content {
+    position: relative;
+    max-width: 900px;
+    width: 90%;
+    max-height: 80vh;
+    background: #ffffff;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    padding: 2rem 2.5rem;
+    overflow-y: auto;
+    z-index: 1;
+}
+
+.project-modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #e5edff;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.project-modal-close:hover {
+    background: #d0e2ff;
+    transform: translateY(-1px);
+}
+
+.project-modal-body .project-header h3 {
+    font-size: 1.4rem;
+}
+
+.project-modal-body .project-results li {
+    margin-bottom: 0.75rem;
+}
+
+@media (max-width: 768px) {
+    .project-modal-content {
+        width: 94%;
+        padding: 1.5rem 1.25rem;
+    }
 }
 
 /* 能力规格 */
