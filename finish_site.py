@@ -1,4 +1,14 @@
-<!DOCTYPE html>
+#!/usr/bin/env python3
+"""
+完成工作室网站创建脚本
+"""
+
+import os
+import shutil
+
+def create_complete_html():
+    """创建完整的HTML文件"""
+    html_content = '''<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
@@ -14,20 +24,16 @@
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
-                <div class="nav-avatar">
-                    <img src="profile.jpg" alt="Oliver Huang Avatar">
-                </div>
-                <div class="nav-text">
-                    <span class="logo">Oliver Huang</span>
-                    <span class="tagline">嵌入式软件经理 / 架构师</span>
-                </div>
+                <span class="logo">Oliver Huang</span>
+                <span class="tagline">嵌入式软件经理 / 架构师</span>
             </div>
             <div class="nav-links">
                 <a href="#about">关于</a>
                 <a href="#value">价值主张</a>
                 <a href="#projects">项目案例</a>
                 <a href="#skills">能力规格</a>
-                <a href="#why-me">为什么选我</a>
+                <a href="#contact">联系</a>
+                <a href="http://huangzhiwen.online/index_en.html" class="lang-btn">EN</a>
             </div>
             <button class="menu-toggle" id="menuToggle">
                 <i class="fas fa-bars"></i>
@@ -41,11 +47,12 @@
         <a href="#value">价值主张</a>
         <a href="#projects">项目案例</a>
         <a href="#skills">能力规格</a>
-        <a href="#why-me">为什么选我</a>
+        <a href="#contact">联系</a>
+        <a href="http://huangzhiwen.online/index_en.html">English Version</a>
     </div>
 
-    <!-- 英雄区域 / 关于 -->
-    <header id="about" class="hero">
+    <!-- 英雄区域 -->
+    <header class="hero">
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title">黄志文 <span class="highlight">Oliver</span></h1>
@@ -71,6 +78,7 @@
                         <span>邮箱：<a href="mailto:magicoliverhuang@gmail.com">magicoliverhuang@gmail.com</a></span>
                     </div>
                 </div>
+                <a href="#contact" class="cta-button">开始合作</a>
             </div>
             <div class="hero-image">
                 <div class="code-window">
@@ -325,7 +333,7 @@ void solve_laziness_with_tech() {
     </section>
 
     <!-- 为什么选我 -->
-    <section id="why-me" class="section why-me">
+    <section class="section why-me">
         <div class="container">
             <h2 class="section-title">为什么选我</h2>
             <div class="reasons-grid">
@@ -342,10 +350,4 @@ void solve_laziness_with_tech() {
                 <div class="reason-card">
                     <div class="reason-number">03</div>
                     <h3>高效协作与问题闭环</h3>
-                    <p>能与硬件、测试、生产、客户高效协作，推动问题闭环，并愿意带人和分享。</p>
-                </div>
-                <div class="reason-card">
-                    <div class="reason-number">04</div>
-                    <h3>善用 AI 提升效能</h3>
-                    <p>系统性引入 AI 辅助编码、评审与文档，结合平台化工具链，让团队更快验证想法、减少低价值重复劳动。</p>
-                </div>
+                    <p
