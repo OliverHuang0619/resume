@@ -3,231 +3,387 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oliver Huang</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Oliver Huang | Embedded Architecture × AI Delivery</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <a href="index.html" class="lang-switcher" title="中文">中文</a>
-            <div class="profile-section">
-                <div class="profile-image">
-                    <img src="profile.jpg" alt="Photo" class="avatar-placeholder">
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <div class="nav-avatar">
+                    <img src="profile.jpg" alt="Oliver Huang">
                 </div>
-                <div class="profile-info">
-                    <div class="name-block">
-                        <h1>Oliver Huang</h1>
-                        <p class="motto">Think lazy; use technology to solve your laziness.</p>
-                    </div>
-                    <p class="title">Product: Embedded Software Manager / Architect · Smart Hardware & Platform Delivery</p>
-                    <div class="contact-info">
-                        <span class="contact-item"><i class="contact-icon">🏷</i><span class="contact-text">Age: 35</span></span>
-                        <span class="contact-item"><i class="contact-icon">📍</i><span class="contact-text">Location: Fujian · Xiamen / Quanzhou</span></span>
-                        <span class="contact-item"><i class="contact-icon">📞</i><span class="contact-text">Phone: 18606084070</span></span>
-                        <span class="contact-item"><i class="contact-icon">✉</i><span class="contact-text">Email: magicoliverhuang@gmail.com</span></span>
-                    </div>
+                <div class="nav-text">
+                    <span class="logo">Oliver <span class="highlight">Huang</span></span>
+                    <span class="tagline">Embedded Architecture × AI Delivery</span>
                 </div>
             </div>
-        </header>
-
-        <section class="section">
-            <h2 class="section-title">Value Proposition</h2>
-            <div class="content">
-                <p>For teams that need <strong>smart hardware at scale, IoT platformization, and fast delivery</strong>, I deliver end-to-end value from architecture and platform build to project rollout. Through platform reuse and automation (CI/CD, tooling), I reduce rework and defect rates and shorten time-to-market for new product lines—so teams can focus on innovation. Core belief: use technology to solve “laziness” and free time for what matters.</p>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#value">Value</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#why-me">Why Me</a>
+                <a href="index.html" class="lang-btn" title="中文">中文</a>
             </div>
-        </section>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
 
-        <section class="section">
-            <h2 class="section-title">Core Value & Differentiation</h2>
-            <div class="content">
-                <ul class="achievements">
-                    <li><strong>Platformization & reuse</strong>: Led FFO application framework and CBB component library; adopted by multiple product lines, onboarding to ~2 weeks, code reuse +80%, defect rate down significantly.</li>
-                    <li><strong>Automation & efficiency</strong>: CI/CD, build cache, and static analysis in place; build and pipeline time cut sharply; AI-assisted workflow and standards to improve code quality and review pass rate.</li>
-                    <li><strong>End-to-end delivery</strong>: Full involvement from requirements, tech selection, and architecture to mass production; strong at WBS, risk control, and cross-team coordination for on-time, high-quality delivery.</li>
-                    <li><strong>Measurable outcomes</strong>: 500K+ smart hardware units/year, LoRaWAN latency and OTA success improvements, lower customer complaints and defect density—all backed by clear metrics.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2 class="section-title">Delivery & Case Studies</h2>
-            <div class="projects">
-                <div class="project-card">
-                    <h3>CartSBL · Logistics & System Optimization</h3>
-                    <p class="project-desc">2025.04 - Present | Leedarson IoT Technology Co., Ltd.</p>
-                    <p><strong>Context:</strong> Large-scale LoRaWAN devices, batch OTA, cluster management (incl. Andon and logistics).</p>
-                    <p><strong>Outcomes:</strong></p>
-                    <ul>
-                        <li>Latency 400ms→150ms, comm success 95%→99.99%, TPS 6→10, batch OTA 83%→95%.</li>
-                        <li>100K+ nodes, E2E latency &lt;150ms, fault rate &lt;0.1%, warehouse efficiency +25%.</li>
-                        <li>Unified device management and clustering for stability; cross-timezone support and remote debugging.</li>
-                    </ul>
-                    <div class="tech-stack">
-                        <span class="tech">LoRaWAN</span>
-                        <span class="tech">FOTA</span>
-                        <span class="tech">Cluster</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <h3><a href="https://oliverhuang0619.github.io/ffo" target="_blank" rel="noopener noreferrer">FFO Application Framework · Platform Product</a></h3>
-                    <p class="project-desc">2022.06 - 2024.12 | Leedarson IoT Technology Co., Ltd.</p>
-                    <p><strong>Context:</strong> Internal need for cross-chip, modular firmware platform across product lines.</p>
-                    <p><strong>Outcomes:</strong></p>
-                    <ul>
-                        <li>FFO framework + CBB: 3 product lines reuse; code reuse +80%, defect rate -35% YoY.</li>
-                        <li>~60% project adoption, 100+ CBB components, 365-day stable operation for multiple products.</li>
-                        <li>HAL/OSAL and MLOOP; onboarding to ~2 weeks, shorter cycle for new product types; 2022 company tech innovation award.</li>
-                    </ul>
-                    <div class="tech-stack">
-                        <span class="tech">FFO</span>
-                        <span class="tech">CBB</span>
-                        <span class="tech">HAL/OSAL</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <h3>ACK (Alexa Connect Kits) · Multi-Category Smart Devices</h3>
-                    <p class="project-desc">2022.10 - Present | Leedarson IoT Technology Co., Ltd.</p>
-                    <p><strong>Context:</strong> Alexa-connected bulb, switch, plug; Matter over Wi-Fi; overseas certification and volume delivery.</p>
-                    <p><strong>Outcomes:</strong></p>
-                    <ul>
-                        <li>Alexa smart plug (ESP32C3): voice response &lt;0.8s, satisfaction +40%, 500K+ units/year.</li>
-                        <li>Matter unified framework: switch/lighting/thermostat; firmware delivery cycle -60%.</li>
-                        <li>CI/CD and AI: build and pipeline time down, defect density reduced; behavior specs (Matter Cluster, key/LED, OTA/metrics); multi-category certification and consistent UX; overseas customization and volume.</li>
-                    </ul>
-                    <div class="tech-stack">
-                        <span class="tech">ACK</span>
-                        <span class="tech">ESP32-C3</span>
-                        <span class="tech">Matter</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <h3>Guangsuda · Smart Home & Hotel</h3>
-                    <p class="project-desc">2015.06 - 2019.09 | Embedded Software Engineer</p>
-                    <p><strong>Context:</strong> OMP central control, smart switches, smart hotel solutions.</p>
-                    <p><strong>Outcomes:</strong> 8 device types cross-brand; scene response &lt;500ms; customer complaints -60%; market share to 25%; 5 hotel devices, 2000+ rooms, power -30%, energy efficiency +22%.</p>
-                    <div class="tech-stack">
-                        <span class="tech">OMP</span>
-                        <span class="tech">Smart Switch</span>
-                        <span class="tech">Smart Hotel</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <h3>Fujian Huixing · Embedded Devices & Drivers</h3>
-                    <p class="project-desc">2014.01 - 2015.06 | Embedded Engineer</p>
-                    <p><strong>Context:</strong> Temperature collector, arc detector, handheld terminal.</p>
-                    <p><strong>Outcomes:</strong> Low-level drivers and protocols; HW/SW co-debug and documentation for performance and traceability.</p>
-                    <div class="tech-stack">
-                        <span class="tech">Drivers</span>
-                        <span class="tech">RF/GPS/NTC/TFT</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2 class="section-title">Specifications</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h3>Languages / Scripting</h3>
-                    <div class="skill-tags">
-                        <span class="tag">C</span>
-                        <span class="tag">C++</span>
-                        <span class="tag">Python</span>
-                        <span class="tag">Shell / Bash</span>
-                        <span class="tag">C OOP Design</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <h3>MCU</h3>
-                    <div class="skill-tags">
-                        <span class="tag">TI / Silicon Labs</span>
-                        <span class="tag">NXP</span>
-                        <span class="tag">ST</span>
-                        <span class="tag">Nordic</span>
-                        <span class="tag">ESP32</span>
-                        <span class="tag">ESP32-C3/C6</span>
-                        <span class="tag">Raspberry Pi</span>
-                        <span class="tag">Nationz</span>
-                        <span class="tag">Rockchip</span>
-                        <span class="tag">Allwinner</span>
-                        <span class="tag">HDSC</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <h3>OS</h3>
-                    <div class="skill-tags">
-                        <span class="tag">FreeRTOS</span>
-                        <span class="tag">Linux</span>
-                        <span class="tag">Zephyr</span>
-                        <span class="tag">Bare-metal</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <h3>Protocols / Bus</h3>
-                    <div class="skill-tags">
-                        <span class="tag">Wi-Fi</span>
-                        <span class="tag">BLE</span>
-                        <span class="tag">Ethernet</span>
-                        <span class="tag">LoRaWAN</span>
-                        <span class="tag">Matter</span>
-                        <span class="tag">Z-Wave</span>
-                        <span class="tag">I2C</span>
-                        <span class="tag">SPI</span>
-                        <span class="tag">UART</span>
-                        <span class="tag">RS485</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <h3>Smart Products</h3>
-                    <div class="skill-tags">
-                        <span class="tag">Smart Plug</span>
-                        <span class="tag">Smart Switch</span>
-                        <span class="tag">Smart Lighting</span>
-                        <span class="tag">Dimming</span>
-                        <span class="tag">Security</span>
-                        <span class="tag">Central Control</span>
-                        <span class="tag">Logistics Devices</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <h3>Tools / Cloud</h3>
-                    <div class="skill-tags">
-                        <span class="tag">AI+</span>
-                        <span class="tag">Git</span>
-                        <span class="tag">CI/CD</span>
-                        <span class="tag">Docker</span>
-                        <span class="tag">Aliyun IoT</span>
-                        <span class="tag">Tencent IoT</span>
-                        <span class="tag">AWS IoT</span>
-                    </div>
-                </div>
-            </div>
-            <div class="content" style="margin-top: 20px;">
-                <p><strong>Education:</strong> Concord University College, Fujian Normal University · B.S. Electronic Information Science and Technology · 2010.09 - 2014.06.</p>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2 class="section-title">Why Choose Me</h2>
-            <div class="content">
-                <ul class="achievements">
-                    <li>10+ years embedded and IoT delivery; from drivers to platform, able to own core modules and system design.</li>
-                    <li>Focus on maintainability and extensibility; use abstraction and automation to cut rework so teams focus on innovation.</li>
-                    <li>Effective with HW, test, production, and customers; drive issues to closure and enjoy mentoring.</li>
-                    <li>Continuous learner, good at summarizing; stable output and on-time delivery under pressure.</li>
-                </ul>
-            </div>
-        </section>
-
-        <footer class="footer">
-            <p>© 2026 Oliver Huang | Embedded Software Manager / Architect</p>
-        </footer>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#about">About</a>
+        <a href="#value">Value</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#why-me">Why Me</a>
+        <a href="index.html" class="lang-btn">中文</a>
     </div>
 
-    <script src="script.js"></script>
+    <header id="about" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Oliver <span class="highlight">Huang</span></h1>
+                <p class="hero-subtitle">Think lazy; use technology to solve your laziness.</p>
+                <p class="hero-description">
+                    Embedded Architecture × AI Delivery · Smart Hardware &amp; Platform Delivery
+                </p>
+                <div class="hero-info">
+                    <div class="info-item">
+                        <i class="fas fa-birthday-cake"></i>
+                        <span>Age: 35</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Location: Fujian · Xiamen / Quanzhou</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <span>Phone: 18606084070</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email: <a href="mailto:magicoliverhuang@gmail.com">magicoliverhuang@gmail.com</a></span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="code-window">
+                    <div class="window-header">
+                        <div class="window-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <span class="window-title">platform.c</span>
+                    </div>
+                    <div class="window-content">
+                        <pre><code>// Solve "laziness" with tech — free time for innovation
+void solve_laziness_with_tech() 
+{
+    platform_reuse();
+    automation_tools();
+    faster_delivery();
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="value" class="section value-proposition">
+        <div class="container">
+            <h2 class="section-title">Product Value Proposition</h2>
+            <p class="section-subtitle">
+                For teams that need smart hardware at scale, IoT platformization, and fast delivery — end-to-end capability from architecture and platform build to project rollout.
+            </p>
+            <p class="section-description">
+                Through platform reuse and automation toolchains, reduce rework and defect rates and shorten time-to-market for new product lines — so teams can keep shipping faster without sacrificing quality.
+                <strong>Core belief: use technology to solve "laziness" and free time for innovation and business.</strong>
+            </p>
+            
+            <div class="value-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3>Platformization &amp; Reuse</h3>
+                    <p>Led FFO application framework and CBB component library; adopted across multiple product lines, onboarding to ~2 weeks, code reuse +80%, defect rate down significantly.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Automation &amp; Efficiency</h3>
+                    <p>CI/CD, build cache, and static analysis in place; build and pipeline time cut sharply; AI-assisted workflow and standards to improve code quality and review pass rate.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>End-to-End Delivery</h3>
+                    <p>Full involvement from requirements review, tech selection, and architecture to mass production; strong at WBS, risk control, and cross-team coordination for on-time, high-quality delivery.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Measurable Business Outcomes</h3>
+                    <p>500K+ smart hardware units/year, LoRaWAN latency and OTA success improvements, lower customer complaints and defect density — all backed by clear metrics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section projects">
+        <div class="container">
+            <h2 class="section-title">Delivery &amp; Case Studies</h2>
+            
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>CartSBL · Logistics &amp; System Optimization</h3>
+                        <span class="project-period">2025.04 - Present | Leedarson IoT Technology Co., Ltd.</span>
+                    </div>
+                    <p class="project-client">Context: Large-scale LoRaWAN devices, batch OTA, cluster management (incl. Andon and logistics).</p>
+                    <div class="project-results">
+                        <h4>Outcomes:</h4>
+                        <ul>
+                            <li>Latency 400ms→150ms, comm success 95%→99.99%, TPS 6→10, batch OTA 83%→95%.</li>
+                            <li>100K+ nodes, E2E latency &lt;150ms, fault rate &lt;0.1%, warehouse efficiency +25%.</li>
+                            <li>Unified device management and clustering for stability; cross-timezone support and remote debugging.</li>
+                        </ul>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">LoRaWAN</span>
+                        <span class="tag">FOTA Cluster</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>
+                            <a href="https://oliverhuang0619.github.io/ffo/#/" target="_blank" rel="noopener noreferrer">
+                                FFO Application Framework · Platform Product
+                            </a>
+                        </h3>
+                        <span class="project-period">2022.06 - 2024.12 | Leedarson IoT Technology Co., Ltd.</span>
+                    </div>
+                    <p class="project-client">Context: Internal need for cross-chip, modular firmware platform across product lines.</p>
+                    <div class="project-results">
+                        <h4>Outcomes:</h4>
+                        <ul>
+                            <li>FFO framework + CBB: 3 product lines reuse; code reuse +80%, defect rate -35% YoY.</li>
+                            <li>~60% project adoption, 100+ CBB components, 365-day stable operation for multiple products.</li>
+                            <li>HAL/OSAL and MLOOP scheduling; onboarding to ~2 weeks, shorter cycle for new product types; 2022 company tech innovation award.</li>
+                        </ul>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">FFO</span>
+                        <span class="tag">CBB</span>
+                        <span class="tag">HAL/OSAL</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>ACK (Alexa Connect Kits) · Multi-Category Smart Devices</h3>
+                        <span class="project-period">2022.10 - Present | Leedarson IoT Technology Co., Ltd.</span>
+                    </div>
+                    <p class="project-client">Context: Alexa-connected bulb, switch, plug; Matter over Wi-Fi; overseas certification and volume delivery.</p>
+                    <div class="project-results">
+                        <h4>Outcomes:</h4>
+                        <ul>
+                            <li>Alexa smart plug (ESP32C3): voice response &lt;0.8s, satisfaction +40%, 500K+ units/year.</li>
+                            <li>Matter unified framework: switch/lighting/thermostat; firmware delivery cycle -60%.</li>
+                            <li>CI/CD and AI enablement: build and pipeline time down, defect density reduced; behavior specs (Matter Cluster, key/LED, OTA/metrics); multi-category certification and consistent UX; overseas customization and volume delivery.</li>
+                        </ul>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">ACK</span>
+                        <span class="tag">ESP32-C3</span>
+                        <span class="tag">Matter</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Guangsuda · Smart Home &amp; Hotel</h3>
+                        <span class="project-period">2015.06 - 2019.09 | Embedded Software Engineer</span>
+                    </div>
+                    <p class="project-client">Context: OMP central control, smart switches, smart hotel solutions.</p>
+                    <div class="project-results">
+                        <h4>Outcomes:</h4>
+                        <ul>
+                            <li>8 device types cross-brand; scene response &lt;500ms; customer complaints -60%; market share to 25%.</li>
+                            <li>5 hotel devices, 2000+ rooms, power -30%, energy efficiency +22%.</li>
+                        </ul>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">OMP</span>
+                        <span class="tag">Smart Switch</span>
+                        <span class="tag">Smart Hotel</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>CartSBL · AI-Assisted Delivery (Lowering the Tech Barrier)</h3>
+                        <span class="project-period">2025.01 - Present | Leedarson IoT Technology Co., Ltd.</span>
+                    </div>
+                    <p class="project-client">Context: With almost no front-end/back-end experience on the team, deliver a full CartSBL demo and delivery UI within a tight deadline.</p>
+                    <div class="project-results">
+                        <h4>Outcomes:</h4>
+                        <ul>
+                            <li>With no prior TypeScript, front-end framework, or back-end API experience, used AI to generate and refactor code, look up docs, and design interactions — quickly built device management, control, and event-listener pages.</li>
+                            <li>Turned "what I want to see and how to operate it" into natural-language prompts; AI produced layouts, API call examples, and docs so non-specialists could ship a usable admin console and demo.</li>
+                            <li>Delivery cycle shortened from an estimated 3 weeks to ~1 week with near-zero prior stack knowledge — strong proof that AI lowers the skill barrier and amplifies individual output.</li>
+                        </ul>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">AI-Assisted Dev</span>
+                        <span class="tag">Low-Code Config</span>
+                        <span class="tag">CartSBL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section skills">
+        <div class="container">
+            <h2 class="section-title">Capabilities</h2>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Languages / Scripting</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag primary">C/C++</span>
+                        <span class="skill-tag primary">Python</span>
+                        <span class="skill-tag">Shell / Bash</span>
+                        <span class="skill-tag">C OOP Design</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-microchip"></i> MCU</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">TI / Silicon Labs</span>
+                        <span class="skill-tag">NXP</span>
+                        <span class="skill-tag">ST</span>
+                        <span class="skill-tag">Nordic</span>
+                        <span class="skill-tag primary">ESP32</span>
+                        <span class="skill-tag">ESP32-C3/C6</span>
+                        <span class="skill-tag">Raspberry Pi</span>
+                        <span class="skill-tag">Nationz</span>
+                        <span class="skill-tag">Rockchip</span>
+                        <span class="skill-tag">Allwinner</span>
+                        <span class="skill-tag">HDSC</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-desktop"></i> Operating Systems</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag primary">FreeRTOS</span>
+                        <span class="skill-tag primary">Linux</span>
+                        <span class="skill-tag">Zephyr</span>
+                        <span class="skill-tag">Bare-metal</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-wifi"></i> Protocols / Bus</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag primary">Wi-Fi</span>
+                        <span class="skill-tag primary">BLE</span>
+                        <span class="skill-tag">Ethernet</span>
+                        <span class="skill-tag primary">LoRaWAN</span>
+                        <span class="skill-tag primary">Matter</span>
+                        <span class="skill-tag">Z-Wave</span>
+                        <span class="skill-tag">I2C</span>
+                        <span class="skill-tag">SPI</span>
+                        <span class="skill-tag">UART</span>
+                        <span class="skill-tag">RS485</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-lightbulb"></i> Smart Products</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Smart Plug</span>
+                        <span class="skill-tag">Smart Switch</span>
+                        <span class="skill-tag">Smart Lighting</span>
+                        <span class="skill-tag">Dimming</span>
+                        <span class="skill-tag">Security</span>
+                        <span class="skill-tag">Central Control Platform</span>
+                        <span class="skill-tag">Logistics Devices</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Tools / Cloud</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag primary">AI+Git</span>
+                        <span class="skill-tag primary">CI/CD Automation</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Aliyun IoT</span>
+                        <span class="skill-tag">Tencent IoT</span>
+                        <span class="skill-tag">AWS IoT</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="education">
+                <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                <p>Concord University College, Fujian Normal University · B.S. Electronic Information Science and Technology · 2010.09 - 2014.06</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-me" class="section why-me">
+        <div class="container">
+            <h2 class="section-title">Why Choose Me</h2>
+            <div class="reasons-grid">
+                <div class="reason-card">
+                    <div class="reason-number">01</div>
+                    <h3>10+ Years Embedded &amp; IoT Delivery</h3>
+                    <p>From drivers to platform — able to own core modules and system design independently.</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-number">02</div>
+                    <h3>Focus on Maintainability &amp; Extensibility</h3>
+                    <p>Use abstraction and automation to cut rework so teams can focus on innovation and business.</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-number">03</div>
+                    <h3>Effective Collaboration &amp; Issue Closure</h3>
+                    <p>Work well with hardware, test, production, and customers; drive issues to closure and enjoy mentoring.</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-number">04</div>
+                    <h3>Leverage AI to Boost Team Output</h3>
+                    <p>Systematically use AI for coding, review, and docs — combined with platform toolchains to validate ideas faster and reduce low-value repetition.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="project-modal" id="projectModal" aria-hidden="true">
+        <div class="project-modal-overlay"></div>
+        <div class="project-modal-content" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle">
+            <button class="project-modal-close" id="projectModalClose" aria-label="Close project details">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="project-modal-body" id="projectModalBody">
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

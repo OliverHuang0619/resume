@@ -153,6 +153,16 @@ textarea,
     background-color: var(--primary-dark);
 }
 
+.nav-links a.lang-btn::after,
+.mobile-menu a.lang-btn::after {
+    display: none;
+}
+
+.mobile-menu a.lang-btn {
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
 .menu-toggle {
     display: none;
     background: none;
